@@ -8,6 +8,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
+
 @Slf4j
 @Service
 public class SmsNotificationService implements NotificationService {
@@ -16,12 +18,14 @@ public class SmsNotificationService implements NotificationService {
     @Value("${twilio.auth.token:localTwilioAuthToken}")
     private String twilioAuthToken;
 
+    @PostConstruct
+    void init() {
+        Twilio.init(twilioAccountSid, twilioAuthToken);
+    }
+
     @Override
     public String sendNotification(String toNumber, String fromNumber) {
         try {
-            // Find your Account Sid and Token at twilio.com/console
-            // DANGER! This is insecure. See http://twil.io/secure
-            Twilio.init(twilioAccountSid, twilioAuthToken);
 
             Message.creator(
                             phoneNumberFromString("+" + toNumber),
