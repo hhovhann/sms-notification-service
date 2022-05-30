@@ -12,7 +12,7 @@ System designed as a Spring Boot Web Application. Provides Rest API with followi
 - Send SMS
 ```
 * Send SMS to number
-    POST /v1/api/sms/{to_number}/{twilio_from_number}}
+    POST /v1/api/sms/{to_number}/{twilio_from_number}
     POST /v1/api/sms/374123456789/1234567890    
 ```
 
