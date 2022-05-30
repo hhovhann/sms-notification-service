@@ -16,13 +16,6 @@ System designed as a Spring Boot Web Application. Provides Rest API with followi
     POST /v1/api/sms/374123456789/1234567890    
 ```
 
-## Security Support
-There is support for basic authentication now with inmemory
-
-- `role: ADMIN username:password admin:admin`
-- `role: OPERATOR username:password operator:operator`
-- `role: PHOTOGRAPHER username:password photographer:photographer`
-
 ### Software Environment Variables
 - TWILIO_ACCOUNT_SID - your registered twilio account SID
 - TWILIO_AUTH_TOKEN - your registered twilio auth token
@@ -30,6 +23,3 @@ There is support for basic authentication now with inmemory
 ## Software Run
 - Run application with bach command from project root `./scripts/run.sh`
 - Run the application from the IDEA with TWILIO_ACCOUNT_SID and TWILIO_AUTH_TOKEN env variables
-
-## Software Design and Diagram
-Please check the [Photostudio Diagramm](design/photostudio.png)
