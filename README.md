@@ -12,14 +12,36 @@ System designed as a Spring Boot Web Application. Provides Rest API with followi
 - Send SMS
 ```
 * Send SMS to number
-    POST /v1/api/sms/{to_number}/{twilio_from_number}
-    POST /v1/api/sms/374123456789/1234567890    
+    
+    POST /api/v1/sms HTTP/1.1
+    Content-Type: application/json
+    Request body:
+    {
+      "messageBody": "Hello from Twilio 📞",
+      "receiverNumber": "37491242491"
+    }
+    
+    STATUS 200: Successfully Response: 
+    Response Body: "Message sent successfully"
+    
+    STATUS 500: UnSuccessfully Response: 
+    Response Body: "Message sent unsuccessfully"
+    
 ```
 
 ### Software Environment Variables
 - TWILIO_ACCOUNT_SID - your registered twilio account SID
 - TWILIO_AUTH_TOKEN - your registered twilio auth token
+- TWILIO_PHONE_NUMBER - your registered twilio phone number
 
 ## Software Run
 - Run application with bach command from project root `./scripts/run.sh`
-- Run the application from the IDEA with TWILIO_ACCOUNT_SID and TWILIO_AUTH_TOKEN env variables
+- Run the application from the IDEA with TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN and TWILIO_PHONE_NUMBER env variables
+
+
+## Improvements: Nice to have
+- Could be added openAPI
+- Could be added custom exceptions and global handling
+- Could support list of receivers
+- Integration Tests are missing for twilio e2e
+- 
