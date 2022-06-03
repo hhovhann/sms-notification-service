@@ -44,4 +44,3 @@ System designed as a Spring Boot Web Application. Provides Rest API with followi
 - Could be added custom exceptions and global handling
 - Could support list of receivers
 - Integration Tests are missing for twilio e2e
-- 
