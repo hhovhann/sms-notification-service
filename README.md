@@ -18,7 +18,7 @@ System designed as a Spring Boot Web Application. Provides Rest API with followi
     Request body:
     {
       "messageBody": "Hello from Twilio 📞",
-      "receiverNumber": "37491242491"
+      "receiverNumber": "37412345678"
     }
     
     STATUS 200: Successfully Response: 
