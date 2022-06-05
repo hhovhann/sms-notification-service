@@ -3,7 +3,7 @@
 ## Software Environment
 
 * Spring Boot 2.7.0
-* Java "11"
+* Java "17"
 + Maven 3.8.2
 
 ## Software Behaviour
