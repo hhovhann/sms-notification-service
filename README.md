@@ -51,16 +51,22 @@ System designed as a Spring Boot Web Application. Provides Rest API with followi
 
 
 ### Software Environment Variables
-- TWILIO_ACCOUNT_SID - your registered twilio account SID
-- TWILIO_AUTH_TOKEN - your registered twilio auth token
-- TWILIO_PHONE_NUMBER - your registered twilio phone number
+- SMS Configuration Environment Variables
+  - TWILIO_ACCOUNT_SID - your registered twilio account SID
+  - TWILIO_AUTH_TOKEN - your registered twilio auth token
+  - TWILIO_PHONE_NUMBER - your registered twilio phone number
+- SMS Configuration Environment Variables
+  - EMAIL_HOST - your registered email host
+  - EMAIL_PORT - your registered email port
+  - EMAIL_USERNAME - your registered email sender username
+  - EMAIL_PASSWORD - your registered sender password
 
 ## Software Run
 - Run application with bach command from project root `./scripts/run.sh`
 - Run the application from the IDEA with TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN and TWILIO_PHONE_NUMBER env variables
 - Run as a docker container
     - `docker build -t notification-service:v1 .`
-    - `docker run -d --name notification-service -p 8080:8080 -e TWILIO_ACCOUNT_SID={your registered twilio account SID} -e TWILIO_AUTH_TOKEN={your registered twilio auth token} -e TWILIO_PHONE_NUMBER{your registered twilio phone number} -e TWILIO_PHONE_RECEIVER_NUMBER={your receiver number} notification-service:v1`
+    - `docker run -d --name notification-service -p 8080:8080 -e TWILIO_ACCOUNT_SID={your registered twilio account SID} -e TWILIO_AUTH_TOKEN={your registered twilio auth token} -e TWILIO_PHONE_NUMBER{your registered twilio phone number} -e TWILIO_PHONE_RECEIVER_NUMBER={your receiver number} -e EMAIL_HOST={your email host} -e EMAIL_PORT={your email port} -e EMAIL_USERNAME={your email username} EMAIL_PASSWORD={your email password} notification-service:v1`
 
 
 ## Improvements

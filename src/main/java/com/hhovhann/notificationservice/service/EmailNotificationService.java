@@ -1,5 +1,6 @@
 package com.hhovhann.notificationservice.service;
 
+import com.hhovhann.notificationservice.configuration.EmailConfiguration;
 import com.hhovhann.notificationservice.model.sms.NotificationRequestBody;
 import com.hhovhann.notificationservice.model.sms.NotificationResponseBody;
 import lombok.extern.slf4j.Slf4j;
@@ -21,10 +22,14 @@ public class EmailNotificationService implements NotificationService {
     @Autowired
     private JavaMailSender emailSender;
 
+    @Autowired
+    EmailConfiguration emailConfiguration;
+
     @Override
     public NotificationResponseBody sendNotification(NotificationRequestBody notificationRequestBody) {
         return sendSimpleMessage(notificationRequestBody.getReceiver(), "Email Notification", notificationRequestBody.getMessageBody());
     }
+
     public NotificationResponseBody sendSimpleMessage(String to, String subject, String text) {
         SimpleMailMessage message = new SimpleMailMessage();
         message.setFrom("noreply@gmail.com");
