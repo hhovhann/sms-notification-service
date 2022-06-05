@@ -18,7 +18,7 @@ System designed as a Spring Boot Web Application. Provides Rest API with followi
     Request body:
     {
       "messageBody": "Hello from Twilio 📞",
-      "receiverNumber": "37491242491"
+      "receiverNumber": "37412345678"
     }
     
     STATUS 200: Successfully Response: 
@@ -60,8 +60,5 @@ System designed as a Spring Boot Web Application. Provides Rest API with followi
 - Run the application from the IDEA with TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN and TWILIO_PHONE_NUMBER env variables
 
 
-## Improvements: Nice to have
-- Could be added openAPI
-- Could be added custom exceptions and global handling
-- Could support list of receivers
-- Integration Tests are missing for twilio E2E
+## Improvements
+- Unit/Integration Tests are missing for Sms and Email sending
