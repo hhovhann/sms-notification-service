@@ -1,4 +1,4 @@
-package com.hhovhann.smsnotificationservice.configuration;
+package com.hhovhann.notificationservice.configuration;
 
 import com.twilio.Twilio;
 import lombok.Data;
@@ -9,7 +9,7 @@ import javax.annotation.PostConstruct;
 
 @Data
 @Configuration
-public class TwilioConfiguration {
+public class SmsTwilioConfiguration {
     @Value("${twilio.account.sid:localTwilioAccountSid}")
     private String twilioAccountSid;
     @Value("${twilio.auth.token:localTwilioAuthToken}")

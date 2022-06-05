@@ -1,4 +1,4 @@
-# Software Document
+# Notification Service Software Document
 
 ## Software Environment
 
@@ -11,9 +11,9 @@ System designed as a Spring Boot Web Application. Provides Rest API with followi
 
 - Send SMS
 ```
-* Send SMS to number
+* Send notification sms
     
-    POST /api/v1/sms HTTP/1.1
+    POST /api/v1/noticications/sms HTTP/1.1
     Content-Type: application/json
     Request body:
     {
@@ -29,6 +29,27 @@ System designed as a Spring Boot Web Application. Provides Rest API with followi
     
 ```
 
+- Send Email
+```
+* Send notification email
+    
+    POST /api/v1/notifications/email HTTP/1.1
+    Content-Type: application/json
+    Request body:
+    {
+      "messageBody": "Hello from Twilio 📞",
+      "receiverNumber": "37491242491"
+    }
+    
+    STATUS 200: Successfully Response: 
+    Response Body: "Message sent successfully"
+    
+    STATUS 500: UnSuccessfully Response: 
+    Response Body: "Message sent unsuccessfully"
+    
+```
+
+
 ### Software Environment Variables
 - TWILIO_ACCOUNT_SID - your registered twilio account SID
 - TWILIO_AUTH_TOKEN - your registered twilio auth token
@@ -43,5 +64,4 @@ System designed as a Spring Boot Web Application. Provides Rest API with followi
 - Could be added openAPI
 - Could be added custom exceptions and global handling
 - Could support list of receivers
-- Integration Tests are missing for twilio e2e
-- 
+- Integration Tests are missing for twilio E2E

@@ -1,10 +1,10 @@
-package com.hhovhann.smsnotificationservice;
+package com.hhovhann.notificationservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SmsNotificationServiceApplicationTests {
+class NotificationServiceApplicationTests {
 
 	@Test
 	void contextLoads() {

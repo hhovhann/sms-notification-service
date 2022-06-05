@@ -9,17 +9,23 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.hhovhann</groupId>
-    <artifactId>sms-notification-service</artifactId>
+    <artifactId>notification-service</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>sms-notification-service</name>
+    <name>notification-service</name>
     <description>Sms Notification Demo Service project for Spring Boot</description>
     <properties>
         <java.version>11</java.version>
+        <twilio.version>8.29.1</twilio.version>
+        <springdoc.openapi.version>1.6.9</springdoc.openapi.version>
     </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -34,7 +40,12 @@
         <dependency>
             <groupId>com.twilio.sdk</groupId>
             <artifactId>twilio</artifactId>
-            <version>8.28.0</version>
+            <version>${twilio.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>${springdoc.openapi.version}</version>
         </dependency>
     </dependencies>
 

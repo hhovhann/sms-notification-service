@@ -1,10 +1,10 @@
-package com.hhovhann.smsnotificationservice.model.sms;
+package com.hhovhann.notificationservice.model.sms;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class SmsResponseBody {
+public class NotificationResponseBody {
     String responseMessage;
 }
